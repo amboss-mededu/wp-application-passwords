@@ -423,7 +423,7 @@ class Application_Passwords {
 			'auth-app',
 			'authApp',
 			array(
-				'root'       => esc_url_raw( site_url() ),
+				'root'       => esc_url_raw( site_url() . '/wp-json/' ),
 				'namespace'  => '2fa/v1',
 				'nonce'      => wp_create_nonce( 'wp_rest' ),
 				'user_id'    => $user->ID,
@@ -568,7 +568,7 @@ class Application_Passwords {
 			'application-passwords-js',
 			'appPass',
 			array(
-				'root'      => esc_url_raw( site_url() ),
+				'root'      => esc_url_raw( site_url() . '/wp-json/' ),
 				'namespace' => '2fa/v1',
 				'nonce'     => wp_create_nonce( 'wp_rest' ),
 				'user_id'   => $user->ID,
